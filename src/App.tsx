@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { Telegram } from "@twa-dev/types";
 import './App.css'
-import BarcodeScannerComponent from 'react-qr-barcode-scanner';
+import BarcodeScannerComponent from 'react-barcode-scanner-updated';
+
 
 declare global {
   interface Window {
@@ -19,10 +20,15 @@ function App() {
   };
   return (
     <div style={{ maxWidth: 500 }}>
+
+
       <BarcodeScannerComponent
         facingMode='environment'
         onError={onError}
-        torch={true}
+        // videoConstraints={{
+        //   facingMode: "user"
+        // }}
+        // torch={true}
         onUpdate={(err: unknown, result) => {
           if (result) {
             setData(result.getText());
