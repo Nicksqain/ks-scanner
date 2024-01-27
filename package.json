@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "@twa-dev/types": "^7.0.0",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "react-qr-barcode-scanner": "^1.0.6"
+    "react": "^18.2.0",
+    "react-barcode-scanner-updated": "^1.0.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^16.14.56",
