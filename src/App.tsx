@@ -15,6 +15,7 @@ function App() {
 
 
   const tg = window?.Telegram?.WebApp;
+  tg.expand()
   const onError = (error: unknown) => {
     console.log(error)
   };
