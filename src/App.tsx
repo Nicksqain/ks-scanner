@@ -14,7 +14,12 @@ function App() {
   const [qrMessage, setQrMessage] = useState("");
 
   const tg = window?.Telegram?.WebApp;
-  tg.expand()
+
+  useEffect(() => {
+    if (tg) {
+      tg.expand();
+    }
+  }, [tg]);
 
   useEffect(() => {
     const config = { fps: 10, qrbox: { width: 200, height: 200 } };
@@ -36,7 +41,6 @@ function App() {
       setEnabled(false);
     };
     const qrCodeFailure = () => {
-      setEnabled(false);
     };
 
     if (isEnabled) {
