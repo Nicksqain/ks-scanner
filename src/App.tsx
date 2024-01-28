@@ -49,7 +49,7 @@ function App() {
     return () => {
       qrScanerStop();
     };
-  }, [isEnabled, tg]);
+  }, [isEnabled]);
 
   return (
     <div className="scaner">
